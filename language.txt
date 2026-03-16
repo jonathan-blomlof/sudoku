@@ -1,2 +1,71 @@
+Goal: text encoded description over a sudoku logic. Should be all needed to describe any sudoku at all. Up to descriptor how to show. Or maybe also encode that? Maybe optional I mean, nice to be able to set. Yeah actually lets do that. The goal is not to encode a solution, but the rules to make up the puzzle.
+
+The sudoku language should be able to treat:
+
+Variable sizes, variable regions, variable digits, variable amount of digits in cell (shrödingers), clues outside of grid
+mathematical operations, comparison
+
+
+Should rules be dependent on each other?
+Maybe, for instance 
+
+
+
+
+Only positive coordinates should matter. (floats, have never seen ig)
+
+mathematical language?
+
+grid: 
+
+rule:
+
+
+
+ arrow:
+    #
+
+doubler:
+one in each region is doubler. Doublers are unique
+
+value:
+if cell is doubler:
+    ret 2x cell_digit
+else:
+    cell_digit
+
+
+---------------------------
+
+
+grid is 9x9 with digits 1-9
+
+grid is 9x9 minus some set.
+grid[]
+
+
+reserve grid, ortogonal, unique, 
+
+obj is <set>
+
+
+cell 1,8 is 9
+
+-------------------------------------------------
+<start>::= grid is <cellSetExpr> . <cont>
+
+<cont>
+
+
+<cellSetExpr> ::= <d> x <d> <setOperator> <cellSetExpr> | <d> x <d> | { <cells> }
+
+<cells> ::= <cell> , <cells> | <cell>
+<cell> ::= (<d>, <d>)
+
+<d>::= "number"
+
+
+
+
 
 
